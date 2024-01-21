@@ -8,3 +8,6 @@ pyvenv.cfg
 
 # Affinity Photo
 *.afphoto*
+
+# VSCode Files
+.vscode/
