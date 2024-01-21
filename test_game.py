@@ -15,6 +15,14 @@ class TestGame(unittest.TestCase):
 
     def test_game_loop(self):
         self.game.running = True
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_UP))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_w))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_DOWN))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_s))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_LEFT))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_a))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_RIGHT))
+        self.game.pygame.event.post(pygame.event.Event(pygame.K_d))
         self.game.pygame.event.post(pygame.event.Event(pygame.QUIT))
         self.game.main()  # This should run the game loop until pygame.QUIT is posted
 

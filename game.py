@@ -5,6 +5,7 @@ __author__ = 'Xander Petty'
 
 import pygame
 from mySprite import MySprite
+CLOCK = pygame.time.Clock()
 TITLE = 'Practice Project'
 RESOLUTION = (800, 600)
 BLACK = (0, 0, 0)
@@ -22,8 +23,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
         screen.fill(BLACK)
+        player.update()
         player.draw(screen)
         pygame.display.flip()
+        CLOCK.tick(60)
 
     pygame.quit()
 
