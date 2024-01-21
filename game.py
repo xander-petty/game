@@ -14,7 +14,7 @@ pygame.init()
 pygame.display.set_caption(TITLE)
 screen = pygame.display.set_mode(RESOLUTION)
 
-if __name__ == '__main__':
+def main():
     running = True
     player = MySprite(pygame.image.load('smile.png'), (400, 300))
     while running:
@@ -26,3 +26,6 @@ if __name__ == '__main__':
         pygame.display.flip()
 
     pygame.quit()
+
+if __name__ == '__main__':
+    main()
