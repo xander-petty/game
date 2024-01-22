@@ -17,7 +17,7 @@ screen = pygame.display.set_mode(RESOLUTION)
 
 def main():
     running = True
-    player = MySprite(pygame.image.load('smile.png'), (400, 300))
+    player = MySprite((400, 300))
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
