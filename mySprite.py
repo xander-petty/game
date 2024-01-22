@@ -5,9 +5,9 @@ __author__ = 'Xander Petty'
 import pygame
 
 class MySprite(pygame.sprite.Sprite):
-    def __init__(self, image, position):
+    def __init__(self, position):
         super().__init__()
-        self.image = image
+        self.image = pygame.image.load('smile.png')
         self.rect = self.image.get_rect()
         self.rect.center = position
         self.speed = pygame.math.Vector2(0, 0)
