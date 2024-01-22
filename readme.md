@@ -39,6 +39,14 @@ The game initializes a Pygame screen with a resolution of 800x600. A sprite is l
 
 - `game.py`: This is the main file that runs the game.
 - `mySprite.py`: This file contains the MySprite class used to create and manage the sprite in the game.
+- `Bar.py`: This is the bar object that will be shot at.
+- `Projectile.py`: This is the object that will be fired from the player.
+
+## Test Units
+- `test_game.py`: Unit test for the game loop.
+- `test_mySprite.py`: Unit test for the mySprite object.
+- `test_Bar.py`: Unit test for the Bar object.
+- `test_Projectile.py`: Unit test for the projectile object.
 
 ## Built With
 
