@@ -37,6 +37,7 @@ def main():
         player.update()
         bar_group.update() 
         projectiles.update()
+        [projectile.check_collision(bar_group) for projectile in projectiles]
         player.draw(screen)
         bar_group.draw(screen) 
         projectiles.draw(screen)
