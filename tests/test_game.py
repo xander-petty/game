@@ -1,6 +1,7 @@
 import unittest
 import pygame
 import game
+from time import sleep
 
 class TestGame(unittest.TestCase):
     def setUp(self):
@@ -12,6 +13,11 @@ class TestGame(unittest.TestCase):
         self.assertEqual(self.game.RESOLUTION, (800, 600))
         self.assertEqual(self.game.BLACK, (0, 0, 0))
         self.assertEqual(self.game.WHITE, (255, 255, 255))
+
+    def test_audio(self):
+        self.game.pygame.mixer.music.play(loops=-1)
+        sleep(1)
+        self.game.pygame.mixer.music.stop()
 
     def test_game_loop(self):
         self.game.running = True
