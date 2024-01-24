@@ -15,3 +15,9 @@ pyvenv.cfg
 
 # Garage Band Files
 *.band
+
+# FLStudio Files
+*.flp
+
+# Other
+*.DS_Store
