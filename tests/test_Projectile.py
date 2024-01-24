@@ -1,5 +1,6 @@
 import unittest
 import pygame
+import os
 from Projectile import Projectile
 
 class TestProjectile(unittest.TestCase):
@@ -10,6 +11,9 @@ class TestProjectile(unittest.TestCase):
 
     def test_initial_position(self):
         self.assertEqual(self.missle.rect.center, self.position)
+
+    def test_fired(self):
+        self.assertTrue(self.missle.fired)
 
     def test_update(self):
         self.missle.update()
