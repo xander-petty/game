@@ -1,9 +1,5 @@
 import unittest
 import pygame
-import os
-import sys
-os.chdir(os.path.abspath(os.pardir))
-sys.path.append(os.getcwd())
 from Bar import Bar
 
 class TestBar(unittest.TestCase):
