@@ -25,10 +25,10 @@ def main():
     pygame.mixer.music.play(loops=-1)
     player = MySprite((400, 300), screen)
     bar_group = pygame.sprite.Group()  
-    bars = bar_generator(7, 5)
-    bar_group.add(bars) 
     projectiles = pygame.sprite.Group()
     while running:
+        if len(bar_group) == 0:
+            bar_group.add(bar_generator(7, 5))
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
