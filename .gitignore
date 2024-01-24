@@ -12,3 +12,6 @@ pyvenv.cfg
 
 # VSCode Files
 .vscode/
+
+# Garage Band Files
+*.band
