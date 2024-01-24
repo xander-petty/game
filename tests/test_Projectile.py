@@ -1,5 +1,9 @@
 import unittest
 import pygame
+import os
+import sys
+os.chdir(os.path.abspath(os.pardir))
+sys.path.append(os.getcwd())
 from Projectile import Projectile
 
 class TestProjectile(unittest.TestCase):
@@ -12,9 +16,8 @@ class TestProjectile(unittest.TestCase):
         self.assertEqual(self.missle.rect.center, self.position)
 
     def test_update(self):
-        self.missle.speed = pygame.math.Vector2(5, 0)
         self.missle.update()
-        self.assertEqual(self.missle.rect.center, (105, 100))
+        self.assertEqual(self.missle.rect.center, (100, 95))
 
     def tearDown(self):
         pygame.quit()

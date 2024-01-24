@@ -4,11 +4,12 @@ The projectile object that will be fired by the player
 __author__ = 'Xander Petty'
 
 import pygame
+import os
 
 class Projectile(pygame.sprite.Sprite):
     def __init__(self, position):
         super().__init__()
-        self.image = pygame.image.load('shoot.png')
+        self.image = pygame.image.load(os.path.join('assets', 'projectile.png'))
         self.rect = self.image.get_rect()
         self.rect.center = position
         self.speed = pygame.math.Vector2(0, 0)

@@ -3,12 +3,13 @@
 __author__ = 'Xander Petty'
 
 import pygame
+import os
 from Projectile import Projectile
 
 class MySprite(pygame.sprite.Sprite):
     def __init__(self, position):
         super().__init__()
-        self.image = pygame.image.load('smile.png')
+        self.image = pygame.image.load(os.path.join('assets', 'smile.png'))
         self.rect = self.image.get_rect()
         self.rect.center = position
         self.speed = pygame.math.Vector2(0, 0)

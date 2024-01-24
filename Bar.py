@@ -3,6 +3,7 @@
 __author__ = 'Xander Petty'
 
 import pygame
+import os
 
 def generator(count, rows):
     multiplier = 100
@@ -17,7 +18,7 @@ def generator(count, rows):
 class Bar(pygame.sprite.Sprite):
     def __init__(self, position):
         super().__init__()
-        self.image = pygame.image.load('bar.png')
+        self.image = pygame.image.load(os.path.join('assets', 'bar.png'))
         self.rect = self.image.get_rect()
         self.rect.center = position
         self.speed = pygame.math.Vector2(0, 0)
