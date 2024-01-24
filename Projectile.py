@@ -19,6 +19,7 @@ class Projectile(pygame.sprite.Sprite):
     def check_collision(self, sprite_group):
         for sprite in sprite_group:
             if sprite.rect.colliderect(self.rect):
+                pygame.mixer.Sound(os.path.join('assets', 'crash.mp3')).play()
                 sprite.kill()
                 self.kill()
 
