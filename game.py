@@ -4,6 +4,7 @@ A PyGame practice project
 __author__ = 'Xander Petty'
 
 import pygame
+import os
 from mySprite import MySprite
 from Bar import Bar
 from Bar import generator as bar_generator
@@ -14,11 +15,14 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
 pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(os.path.join('assets', 'Background_music.mp3'))
 pygame.display.set_caption(TITLE)
 screen = pygame.display.set_mode(RESOLUTION)
 
 def main():
     running = True
+    pygame.mixer.music.play(loops=-1)
     player = MySprite((400, 300))
     bar_group = pygame.sprite.Group()  
     bars = bar_generator(7, 5)
