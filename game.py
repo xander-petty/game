@@ -23,7 +23,7 @@ screen = pygame.display.set_mode(RESOLUTION)
 def main():
     running = True
     pygame.mixer.music.play(loops=-1)
-    player = MySprite((400, 300))
+    player = MySprite((400, 300), screen)
     bar_group = pygame.sprite.Group()  
     bars = bar_generator(7, 5)
     bar_group.add(bars) 

@@ -25,8 +25,10 @@ class Projectile(pygame.sprite.Sprite):
 
     def update(self):
         self.rect.move_ip(self.speed)
-        if self.fired:
+        if self.fired and self.rect.y > 0:
             self.rect.y -= 5
+        else:
+            self.kill()
 
     def draw(self, surface):
         surface.blit(self.image, self.rect)
