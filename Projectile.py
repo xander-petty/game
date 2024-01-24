@@ -14,6 +14,7 @@ class Projectile(pygame.sprite.Sprite):
         self.rect.center = position
         self.speed = pygame.math.Vector2(0, 0)
         self.fired = True
+        pygame.mixer.Sound(os.path.join('assets', 'weapon_fire.mp3')).play()
     
     def check_collision(self, sprite_group):
         for sprite in sprite_group:
